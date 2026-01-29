@@ -2,39 +2,51 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sci Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
     <div class="main">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <h2 style="color:var(--text-primary,#fff); margin-bottom:0; letter-spacing:1px;">Scientific Calculator</h2>
+            <button id="theme-toggle" title="Toggle light/dark mode" style="height:36px;width:36px;border-radius:50%;border:none;background:var(--button-bg,#444);color:var(--text-primary,#fff);font-size:20px;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
         <select name="" id="size">
             <option value="2">2x2</option>
             <option value="3">3x3</option>
         </select>
         <div id="det_size">
             <div class="row1">
-                <input id="x1" type="number">
-                <input id="x2" type="number">
-                <input id="x3" type="number">
+                <input id="x1" type="number" placeholder="a₁₁">
+                <input id="x2" type="number" placeholder="a₁₂">
+                <input id="x3" type="number" placeholder="a₁₃">
             </div>
             <div class="row2">
-                <input id="y1" type="number">
-                <input id="y2" type="number">
-                <input id="y3" type="number">
+                <input id="y1" type="number" placeholder="a₂₁">
+                <input id="y2" type="number" placeholder="a₂₂">
+                <input id="y3" type="number" placeholder="a₂₃">
             </div>
             <div class="row3">
-                <input id="z1" type="number">
-                <input id="z2" type="number">
-                <input id="z3" type="number">
+                <input id="z1" type="number" placeholder="a₃₁">
+                <input id="z2" type="number" placeholder="a₃₂">
+                <input id="z3" type="number" placeholder="a₃₃">
             </div>
         </div>
         <button onclick="det()">CALCULATE</button>
+        <button id="copy-result" style="margin-bottom:10px;display:none;">Copy Result</button>
         <div id="value"></div>
+        <div id="matrix-advanced"></div>
+        <div id="history-panel">
+            <h3>History</h3>
+            <ul id="history-list"></ul>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
