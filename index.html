@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="main">
+        <select name="" id="size">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+        </select>
+        <div id="det_size">
+            <div class="row1">
+                <input id="x1" type="number">
+                <input id="x2" type="number">
+                <input id="x3" type="number">
+            </div>
+            <div class="row2">
+                <input id="y1" type="number">
+                <input id="y2" type="number">
+                <input id="y3" type="number">
+            </div>
+            <div class="row3">
+                <input id="z1" type="number">
+                <input id="z2" type="number">
+                <input id="z3" type="number">
+            </div>
+        </div>
+        <button onclick="det()">CALCULATE</button>
+        <div id="value"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
